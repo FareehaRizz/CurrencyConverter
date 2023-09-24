@@ -1,0 +1,68 @@
+import java.util.*;
+public class CurrencyConverter{
+    public static void main(String args[]){
+        System.out.println("1 RUPPEE");
+        System.out.println("2 DOLLAR");
+        System.out.println("3 EURO");
+        
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter your choice: ");
+        int choice=sc.nextInt();
+        System.out.println("Enter your amount: ");
+        double amount=sc.nextDouble();
+        switch(choice){
+            case 1:
+                Ruppee_to_other(amount);
+                break;
+            case 2:
+                Dollar_to_other(amount);
+                break;
+            case 3:
+                Euro_to_other(amount);
+                break;
+            default:
+            System.out.println("invalid choice! ");
+            
+        }
+    }
+    public static void Ruppee_to_other(double amount){
+        System.out.println("1 Ruppee = "+0.012+" Dollars");
+        System.out.println();
+        
+        System.out.println(amount+" Ruppee = "+(amount*0.012)+" Dollars");
+        System.out.println();
+        
+        System.out.println("1 Ruppee = "+0.011+" Euro");
+        System.out.println();
+        
+        System.out.println(amount+" Ruppee = "+(amount*0.011)+" Euro");
+        System.out.println();
+    }
+    
+        public static void Dollar_to_other(double amount){
+        System.out.println("1 Dollar = "+287.22+" Ruppee");
+        System.out.println();
+        
+        System.out.println(amount+" Dollar = "+(amount*287.22)+" Ruppee");
+        System.out.println();
+        
+        System.out.println("1 Dollar = "+0.94+" Euro");
+        System.out.println();
+        
+        System.out.println(amount+" Dollar = "+(amount*0.94)+" Euro");
+        System.out.println();
+    }
+    
+        public static void Euro_to_other(double amount){
+        System.out.println("1 Euro = "+1.07+" Dollars");
+        System.out.println();
+        
+        System.out.println(amount+" Euro = "+(amount*1.07)+" Dollars");
+        System.out.println();
+        
+        System.out.println("1 Euro = "+88.55+" Ruppee");
+        System.out.println();
+        
+        System.out.println(amount+" Euro = "+(amount*88.55)+" Ruppee");
+    }
+}
